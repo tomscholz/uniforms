@@ -1,13 +1,13 @@
-import React   from 'react';
-import {mount} from 'enzyme';
+import React from "react";
+import { mount } from "enzyme";
 
-import QuickForm from 'uniforms-bootstrap3/QuickForm';
+import QuickForm from "uniforms-bootstrap3/QuickForm";
 
-import createSchema from './_createSchema';
+import createSchema from "./_createSchema";
 
-test('<QuickForm> - renders', () => {
-    const element = <QuickForm schema={createSchema()} />;
-    const wrapper = mount(element);
+test("<QuickForm> - renders", () => {
+  const element = <QuickForm schema={createSchema()} />;
+  const wrapper = mount(element);
 
-    expect(wrapper).toHaveLength(1);
+  expect(wrapper).toHaveLength(1);
 });

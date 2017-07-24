@@ -1,10 +1,11 @@
-import Form           from 'antd/lib/form';
-import Icon           from 'antd/lib/icon';
-import React          from 'react';
-import Tooltip        from 'antd/lib/tooltip';
-import filterDOMProps from 'uniforms/filterDOMProps';
+import Form from "antd/lib/form";
+import Icon from "antd/lib/icon";
+import React from "react";
+import Tooltip from "antd/lib/tooltip";
+import filterDOMProps from "uniforms/filterDOMProps";
 
-export default function wrapField ({
+export default function wrapField(
+  {
     colon,
     error,
     errorMessage,
@@ -15,41 +16,38 @@ export default function wrapField ({
     required,
     showInlineError,
     wrapperCol
-}, children) {
-    const labelNode = !!label && (
+  },
+  children
+) {
+  const labelNode =
+    !!label &&
+    <span>
+      {label}
+      {!!info &&
         <span>
-            {label}
-            {!!info && (
-                <span>
-                    &nbsp;
-                    <Tooltip title={info}>
-                        <Icon type="question-circle-o" />
-                    </Tooltip>
-                </span>
-            )}
-        </span>
-    );
+          &nbsp;
+          <Tooltip title={info}>
+            <Icon type="question-circle-o" />
+          </Tooltip>
+        </span>}
+    </span>;
 
-    return (
-        <Form.Item
-            colon={colon}
-            hasFeedback
-            help={showInlineError && error && errorMessage}
-            htmlFor={id}
-            label={labelNode}
-            labelCol={labelCol}
-            required={required}
-            style={{marginBottom: '12px'}}
-            validateStatus={error ? 'error' : undefined}
-            wrapperCol={wrapperCol}
-        >
-            {children}
-        </Form.Item>
-    );
+  return (
+    <Form.Item
+      colon={colon}
+      hasFeedback
+      help={showInlineError && error && errorMessage}
+      htmlFor={id}
+      label={labelNode}
+      labelCol={labelCol}
+      required={required}
+      style={{ marginBottom: "12px" }}
+      validateStatus={error ? "error" : undefined}
+      wrapperCol={wrapperCol}
+    >
+      {children}
+    </Form.Item>
+  );
 }
 
-filterDOMProps.register(
-    'colon',
-    'labelCol',
-    'wrapperCol'
-);
+filterDOMProps.register("colon", "labelCol", "wrapperCol");
