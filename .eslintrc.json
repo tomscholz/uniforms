@@ -12,6 +12,6 @@
   ],
   "root": true,
   "rules": {
-    "prettier/prettier": "error"
+    "prettier/prettier": ["error", {"bracketSpacing": false, "printWidth": 120, "singleQuote": true, "tabWidth": 4}]
   }
 }

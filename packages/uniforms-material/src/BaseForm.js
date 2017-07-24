@@ -1,10 +1,10 @@
-import BaseForm from "uniforms/BaseForm";
+import BaseForm from 'uniforms/BaseForm';
 
 const Material = parent =>
-  class extends parent {
-    static Material = Material;
+    class extends parent {
+        static Material = Material;
 
-    static displayName = `Material${parent.displayName}`;
-  };
+        static displayName = `Material${parent.displayName}`;
+    };
 
 export default Material(BaseForm);

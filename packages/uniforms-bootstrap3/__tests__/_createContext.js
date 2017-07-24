@@ -1,34 +1,34 @@
-import randomIds from "uniforms/randomIds";
+import randomIds from 'uniforms/randomIds';
 
-import createSchema from "./_createSchema";
+import createSchema from './_createSchema';
 
 const randomId = randomIds();
 
 const createContext = (schema, context) => ({
-  context: {
-    uniforms: {
-      error: null,
-      model: {},
-      name: [],
-      onChange() {},
+    context: {
+        uniforms: {
+            error: null,
+            model: {},
+            name: [],
+            onChange() {},
 
-      ...context,
+            ...context,
 
-      randomId,
-      schema: createSchema(schema),
-      state: {
-        changedMap: {},
+            randomId,
+            schema: createSchema(schema),
+            state: {
+                changedMap: {},
 
-        changed: false,
-        disabled: false,
-        label: false,
-        placeholder: false,
-        showInlineError: false,
+                changed: false,
+                disabled: false,
+                label: false,
+                placeholder: false,
+                showInlineError: false,
 
-        ...(context && context.state)
-      }
+                ...(context && context.state)
+            }
+        }
     }
-  }
 });
 
 export default createContext;
