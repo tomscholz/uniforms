@@ -1,13 +1,13 @@
-import React   from 'react';
-import {mount} from 'enzyme';
+import React from "react";
+import { mount } from "enzyme";
 
-import BaseForm from 'uniforms-unstyled/BaseForm';
+import BaseForm from "uniforms-unstyled/BaseForm";
 
-import createSchema from './_createSchema';
+import createSchema from "./_createSchema";
 
-test('<BaseForm> - works', () => {
-    const element = <BaseForm schema={createSchema()} />;
-    const wrapper = mount(element);
+test("<BaseForm> - works", () => {
+  const element = <BaseForm schema={createSchema()} />;
+  const wrapper = mount(element);
 
-    expect(wrapper.find(BaseForm)).toHaveLength(1);
+  expect(wrapper.find(BaseForm)).toHaveLength(1);
 });
