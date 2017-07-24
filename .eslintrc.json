@@ -2,6 +2,16 @@
   "env": {
     "jest": true
   },
-  "extends": "vazco",
-  "root": true
+  "extends": [
+    "vazco",
+    "prettier",
+    "prettier/react"
+  ],
+  "plugins": [
+    "prettier"
+  ],
+  "root": true,
+  "rules": {
+    "prettier/prettier": "error"
+  }
 }

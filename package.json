@@ -62,10 +62,14 @@
       "^uniforms([^/]*)(.*)$": "<rootDir>/packages/uniforms$1/src$2",
       "meteor/([^:]*):(.*)": "<rootDir>/packages/uniforms/__mocks__/meteor/$1_$2.js",
       "meteor/([^:]*)": "<rootDir>/packages/uniforms/__mocks__/meteor/$1.js"
-
     },
     "testMatch": [
       "**/__tests__/**/!(_)*.js"
     ]
+  },
+  "devDependencies": {
+    "eslint-config-prettier": "^2.3.0",
+    "eslint-plugin-prettier": "^2.1.2",
+    "prettier": "^1.5.3"
   }
 }
